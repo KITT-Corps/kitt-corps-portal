@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Layers, Shield, Cpu } from 'lucide-react';
+import { Target, Lock, Cloud, Cpu } from 'lucide-react';
 
 const values = [
   {
@@ -7,28 +7,28 @@ const values = [
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/8 border-cyan-500/15',
     title: 'Our Mission',
-    desc: 'Eliminate the hidden complexity of multi-source data consolidation so engineering teams can focus on building — not plumbing.',
+    desc: 'Advance the boundaries of technology across software engineering, artificial intelligence, and quantum computing — delivering enterprise solutions that are both powerful and private.',
   },
   {
-    icon: Layers,
+    icon: Cloud,
     color: 'text-purple-400',
     bg: 'bg-purple-500/8 border-purple-500/15',
-    title: 'What We Build',
-    desc: 'Lightweight, developer-first tooling for database orchestration, schema unification, and topology visualisation.',
+    title: 'Cloud-Native',
+    desc: 'Every product we ship is built and operated entirely in the cloud. Fully managed infrastructure, enterprise SLAs, and zero setup burden on your team.',
   },
   {
-    icon: Shield,
+    icon: Lock,
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/8 border-emerald-500/15',
-    title: 'Data Sovereignty',
-    desc: 'All tools run on your own infrastructure. Your credentials stay yours — no third-party cloud, no telemetry, no lock-in.',
+    title: 'Strict Privacy',
+    desc: 'We operate under a strict privacy policy. Client data is never shared, sold, or accessed beyond what is required to run the service. Full data ownership remains with you.',
   },
   {
     icon: Cpu,
     color: 'text-amber-400',
     bg: 'bg-amber-500/8 border-amber-500/15',
-    title: 'Built for Engineers',
-    desc: 'Every product is designed to be picked up in minutes — command-line first, with a web dashboard for teams that want one.',
+    title: 'Proprietary Research',
+    desc: 'All intellectual property is developed and owned by KITT Corps. Our products are commercially licensed and built on original, in-house research and engineering.',
   },
 ];
 
@@ -47,22 +47,22 @@ export default function AboutSection() {
           >
             <p className="text-xs font-mono tracking-widest text-cyan-400 uppercase mb-5">About KITT Corps</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-              We build tools that make{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-                data pipelines disappear.
+              Research at the edge of{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                what's possible.
               </span>
             </h2>
             <div className="space-y-4 text-slate-400 text-base leading-relaxed">
               <p>
-                KITT Corps is a research and development organisation focused on the challenges 
-                data engineers face every day — fragmented databases, brittle pipelines, 
-                and the hidden cost of moving data between systems.
+                KITT Corps is a cloud-native research and development organisation working across 
+                some of the most demanding frontiers in technology — data infrastructure, 
+                artificial intelligence, software engineering, and quantum computing.
               </p>
               <p>
-                We design lightweight, self-hostable software that any developer can deploy 
-                in minutes, run on their own infrastructure, and trust with their credentials. 
-                No cloud dependency. No subscription. Just clean, auditable tooling that does 
-                exactly what it says.
+                We build proprietary, commercially licensed products for organisations that 
+                demand performance, privacy, and full control over their data. Every solution 
+                is designed from first principles and delivered as a fully managed cloud service — 
+                no on-premise complexity, no open-source guesswork.
               </p>
             </div>
           </motion.div>

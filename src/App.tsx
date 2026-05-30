@@ -1,5 +1,6 @@
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import ResearchSection from './components/ResearchSection';
 import ProductsSection from './components/ProductsSection';
 import TeamSection from './components/TeamSection';
 import { Mail, Cpu } from 'lucide-react';
@@ -32,6 +33,7 @@ export default function App() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-slate-400">
             {[
               { label: 'About', id: 'about' },
+              { label: 'Research', id: 'research' },
               { label: 'Products', id: 'products' },
               { label: 'Team', id: 'team' },
               { label: 'Contact', id: 'contact' },
@@ -64,8 +66,8 @@ export default function App() {
           onScrollToNodes={() => scrollToId('products')}
           onScrollToInstall={() => scrollToId('products')}
         />
-
         <AboutSection />
+        <ResearchSection />
         <ProductsSection />
         <TeamSection />
 
@@ -75,8 +77,8 @@ export default function App() {
             <p className="text-xs tracking-widest text-cyan-400 uppercase mb-4 font-mono">Contact</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-5">Let's talk.</h2>
             <p className="text-slate-400 text-base leading-relaxed mb-10">
-              Have a question about our products, interested in licensing, or want to discuss 
-              a potential collaboration? We'd love to hear from you.
+              Have a question about our products, interested in a commercial licence, 
+              or want to explore a research collaboration? We'd love to hear from you.
             </p>
             <a
               href="mailto:kittu.priyatham@gmail.com"
@@ -102,8 +104,8 @@ export default function App() {
                 <span className="font-bold text-white">KITT Corps</span>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
-                Research & development organisation building proprietary developer tools 
-                for database orchestration and data infrastructure.
+                Cloud-native research and development organisation advancing proprietary 
+                technology across software engineering, AI, quantum computing, and data infrastructure.
               </p>
             </div>
 
@@ -112,6 +114,7 @@ export default function App() {
               <ul className="space-y-2 text-sm text-slate-500">
                 {[
                   { label: 'About', id: 'about' },
+                  { label: 'Research', id: 'research' },
                   { label: 'Products', id: 'products' },
                   { label: 'Team', id: 'team' },
                   { label: 'Contact', id: 'contact' },

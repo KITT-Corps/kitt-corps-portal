@@ -33,11 +33,11 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
             transition={{ delay: 0.1 }}
             className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-7 leading-[1.06]"
           >
-            Engineering the{' '}
+            Engineering{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-purple-400">
-              future of data
+              tomorrow's
             </span>{' '}
-            infrastructure.
+            technology.
           </motion.h1>
 
           <motion.p
@@ -46,8 +46,9 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
             transition={{ delay: 0.2 }}
             className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl"
           >
-            KITT Corps builds proprietary developer tools that help engineering teams connect,
-            unify, and govern heterogeneous databases — without the overhead of legacy platforms.
+            KITT Corps is a cloud-native research and development organisation advancing proprietary 
+            software across data infrastructure, artificial intelligence, quantum computing, 
+            and beyond — with enterprise-grade privacy at the core of everything we build.
           </motion.p>
 
           <motion.div
@@ -60,7 +61,7 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
               onClick={onScrollToProducts}
               className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-cyan-400 border border-cyan-400 text-slate-950 text-sm font-semibold hover:bg-transparent hover:text-cyan-400 transition-all duration-300 glow-cyan cursor-pointer"
             >
-              Explore our products
+              Our products
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -80,10 +81,10 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
           className="mt-24 flex flex-wrap gap-x-16 gap-y-6"
         >
           {[
-            { value: '2', label: 'Proprietary products' },
-            { value: '100%', label: 'Self-hostable' },
-            { value: 'Zero', label: 'Cloud dependency' },
-            { value: 'Full', label: 'Data ownership' },
+            { value: 'Cloud', label: 'Native & fully managed' },
+            { value: 'Full', label: 'Client data ownership' },
+            { value: 'Strict', label: 'Enterprise privacy policy' },
+            { value: 'Multi', label: 'Domain research' },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-2xl font-bold text-white mb-0.5">{stat.value}</div>
