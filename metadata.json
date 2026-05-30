@@ -1,0 +1,6 @@
+{
+  "name": "KITT Corps Portal",
+  "description": "The official organizational portal and interactive showcase for KITT Corps, featuring the Data-Mate centralized database fusion engine and the interactive DataMateWeb visualizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
