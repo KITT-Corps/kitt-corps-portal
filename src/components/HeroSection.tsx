@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, GitBranch, Cpu } from 'lucide-react';
+import { ArrowRight, GitBranch } from 'lucide-react';
 
 interface HeroProps {
   onScrollToMerge: () => void;
@@ -11,93 +11,95 @@ interface HeroProps {
 
 export default function HeroSection({ onScrollToAbout, onScrollToProducts }: HeroProps) {
   return (
-    <div className="relative overflow-hidden border-b border-slate-800 bg-slate-950/80 pt-20 pb-28 md:pb-36">
-      <div className="grid-lines absolute inset-0 opacity-30 pointer-events-none" />
-
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-cyan-500/8 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-purple-500/8 blur-3xl pointer-events-none" />
+    <div className="relative overflow-hidden border-b border-white/5 bg-[#070b13] pt-24 pb-32 md:pb-40">
+      <div className="grid-lines absolute inset-0 opacity-20 pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-cyan-500/6 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/5 w-[500px] h-[500px] rounded-full bg-purple-500/6 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
+
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-950/30 text-xs font-mono tracking-widest text-cyan-400 uppercase mb-8"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-slate-400 mb-8"
           >
-            <Cpu className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
-            <span>Research & Development</span>
+            Research & Development · Open Source
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.08]"
+            className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-7 leading-[1.06]"
           >
             Engineering the{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-purple-400">
               future of data
-            </span>
-            <br />infrastructure.
+            </span>{' '}
+            infrastructure.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-slate-400 font-sans leading-relaxed mb-10 max-w-2xl"
+            className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl"
           >
-            KITT Corps builds open-source developer tools that simplify how teams connect, unify, and govern 
-            heterogeneous data systems — so engineers spend less time plumbing and more time building.
+            KITT Corps builds open-source tools that help engineering teams connect, 
+            unify, and govern heterogeneous databases — without the overhead of 
+            commercial platforms or vendor lock-in.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex flex-wrap gap-4"
           >
             <button
               onClick={onScrollToProducts}
-              className="group px-6 py-3.5 rounded-lg font-sans text-sm font-semibold border border-cyan-400 bg-cyan-400 text-slate-950 hover:bg-transparent hover:text-cyan-400 transition-all duration-300 glow-cyan cursor-pointer inline-flex items-center gap-2"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-cyan-400 border border-cyan-400 text-slate-950 text-sm font-semibold hover:bg-transparent hover:text-cyan-400 transition-all duration-300 glow-cyan cursor-pointer"
             >
-              Explore Our Products
+              Explore our products
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
 
             <button
               onClick={onScrollToAbout}
-              className="px-6 py-3.5 rounded-lg font-sans text-sm font-medium border border-slate-700 bg-transparent text-slate-300 hover:border-slate-500 hover:text-white transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/10 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-all cursor-pointer"
             >
-              About KITT Corps
+              About us
             </button>
 
             <a
               href="https://github.com/KITT-Corps"
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3.5 rounded-lg font-sans text-sm font-medium text-slate-400 hover:text-white transition-all cursor-pointer inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm text-slate-400 hover:text-white transition-all"
             >
-              <GitBranch className="w-4 h-4 text-purple-400" />
-              GitHub Organisation
+              <GitBranch className="w-4 h-4" />
+              GitHub
             </a>
           </motion.div>
         </div>
 
+        {/* Company metrics strip */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="mt-20 grid sm:grid-cols-3 gap-px bg-slate-800/60 rounded-2xl overflow-hidden border border-slate-800"
+          className="mt-24 flex flex-wrap gap-x-16 gap-y-6"
         >
           {[
-            { value: '2+', label: 'Open-source projects', color: 'text-cyan-400' },
-            { value: '100%', label: 'Developer owned & self-hostable', color: 'text-emerald-400' },
-            { value: 'MIT', label: 'Licensed & free forever', color: 'text-purple-400' },
+            { value: '2', label: 'Open-source products' },
+            { value: 'MIT', label: 'Licensed & free to use' },
+            { value: '100%', label: 'Self-hostable, no SaaS' },
+            { value: 'Zero', label: 'Vendor lock-in' },
           ].map((stat) => (
-            <div key={stat.label} className="bg-slate-950/70 px-8 py-6">
-              <div className={`text-3xl font-bold font-mono mb-1 ${stat.color}`}>{stat.value}</div>
-              <div className="text-sm text-slate-400">{stat.label}</div>
+            <div key={stat.label}>
+              <div className="text-2xl font-bold text-white mb-0.5">{stat.value}</div>
+              <div className="text-sm text-slate-500">{stat.label}</div>
             </div>
           ))}
         </motion.div>
