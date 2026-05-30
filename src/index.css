@@ -1,24 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
+/* Class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-/* High-tech theme baseline */
 html, body {
-  background-color: #0b0f19;
-  color: #f8fafc;
   font-family: var(--font-sans);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
-/* Custom visual utilities for interactive nodes and modules */
+html.dark, html.dark body {
+  background-color: #0b0f19;
+  color: #f8fafc;
+}
+
+/* Grid overlay — dark lines in light mode, white lines in dark */
 .grid-lines {
   background-size: 40px 40px;
-  background-image: 
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+html.dark .grid-lines {
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
@@ -39,33 +52,11 @@ html, body {
   box-shadow: 0 0 25px -5px rgba(147, 51, 234, 0.35);
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #334155;
-}
-
-/* Flow line dash animation for pipeline links */
-@keyframes dash {
-  to {
-    stroke-dashoffset: -40;
-  }
-}
-
-.line-flow {
-  stroke-dasharray: 8, 4;
-  animation: dash 1.5s linear infinite;
-}
-
+html.dark ::-webkit-scrollbar-track { background: #0f172a; }
+html.dark ::-webkit-scrollbar-thumb { background: #1e293b; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #334155; }

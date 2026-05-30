@@ -4,29 +4,29 @@ import { Target, Lock, Cloud, Cpu } from 'lucide-react';
 const values = [
   {
     icon: Target,
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-500/8 border-cyan-500/15',
+    color: 'text-cyan-500 dark:text-cyan-400',
+    bg: 'bg-cyan-50 dark:bg-cyan-500/8 border-cyan-200 dark:border-cyan-500/15',
     title: 'Our Mission',
     desc: 'Advance the boundaries of technology across software engineering, artificial intelligence, and quantum computing — delivering enterprise solutions that are both powerful and private.',
   },
   {
     icon: Cloud,
-    color: 'text-purple-400',
-    bg: 'bg-purple-500/8 border-purple-500/15',
+    color: 'text-purple-500 dark:text-purple-400',
+    bg: 'bg-purple-50 dark:bg-purple-500/8 border-purple-200 dark:border-purple-500/15',
     title: 'Cloud-Native',
     desc: 'Every product we ship is built and operated entirely in the cloud. Fully managed infrastructure, enterprise SLAs, and zero setup burden on your team.',
   },
   {
     icon: Lock,
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-500/8 border-emerald-500/15',
+    color: 'text-emerald-600 dark:text-emerald-400',
+    bg: 'bg-emerald-50 dark:bg-emerald-500/8 border-emerald-200 dark:border-emerald-500/15',
     title: 'Strict Privacy',
     desc: 'We operate under a strict privacy policy. Client data is never shared, sold, or accessed beyond what is required to run the service. Full data ownership remains with you.',
   },
   {
     icon: Cpu,
-    color: 'text-amber-400',
-    bg: 'bg-amber-500/8 border-amber-500/15',
+    color: 'text-amber-600 dark:text-amber-400',
+    bg: 'bg-amber-50 dark:bg-amber-500/8 border-amber-200 dark:border-amber-500/15',
     title: 'Proprietary Research',
     desc: 'All intellectual property is developed and owned by KITT Corps. Our products are commercially licensed and built on original, in-house research and engineering.',
   },
@@ -34,9 +34,8 @@ const values = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-28 bg-[#070b13] border-b border-white/5 relative">
+    <section id="about" className="py-28 bg-slate-50 dark:bg-[#070b13] border-b border-slate-200 dark:border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
           <motion.div
@@ -45,23 +44,23 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-xs font-mono tracking-widest text-cyan-400 uppercase mb-5">About KITT Corps</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
+            <p className="text-xs font-mono tracking-widest text-cyan-500 dark:text-cyan-400 uppercase mb-5">About KITT Corps</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
               Research at the edge of{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 dark:from-cyan-400 dark:to-purple-400">
                 what's possible.
               </span>
             </h2>
-            <div className="space-y-4 text-slate-400 text-base leading-relaxed">
+            <div className="space-y-4 text-slate-600 dark:text-slate-400 text-base leading-relaxed">
               <p>
-                KITT Corps is a cloud-native research and development organisation working across 
-                some of the most demanding frontiers in technology — data infrastructure, 
+                KITT Corps is a cloud-native research and development organisation working across
+                some of the most demanding frontiers in technology — data infrastructure,
                 artificial intelligence, software engineering, and quantum computing.
               </p>
               <p>
-                We build proprietary, commercially licensed products for organisations that 
-                demand performance, privacy, and full control over their data. Every solution 
-                is designed from first principles and delivered as a fully managed cloud service — 
+                We build proprietary, commercially licensed products for organisations that
+                demand performance, privacy, and full control over their data. Every solution
+                is designed from first principles and delivered as a fully managed cloud service —
                 no on-premise complexity, no open-source guesswork.
               </p>
             </div>
@@ -77,13 +76,13 @@ export default function AboutSection() {
             {values.map((card) => (
               <div
                 key={card.title}
-                className={`p-5 rounded-xl border ${card.bg} hover:brightness-110 transition-all`}
+                className={`p-5 rounded-xl border ${card.bg} hover:brightness-95 dark:hover:brightness-110 transition-all`}
               >
                 <div className={`mb-3 ${card.color}`}>
                   <card.icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1.5">{card.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{card.desc}</p>
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-1.5">{card.title}</h3>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </motion.div>
