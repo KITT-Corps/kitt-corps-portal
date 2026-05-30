@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Layers, Globe, Shield } from 'lucide-react';
+import { Target, Layers, Shield, Cpu } from 'lucide-react';
 
 const values = [
   {
@@ -17,18 +17,18 @@ const values = [
     desc: 'Lightweight, developer-first tooling for database orchestration, schema unification, and topology visualisation.',
   },
   {
-    icon: Globe,
+    icon: Shield,
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/8 border-emerald-500/15',
-    title: 'Open Source First',
-    desc: 'Every project we ship is MIT-licensed and published openly. Community contributions are always welcome.',
+    title: 'Data Sovereignty',
+    desc: 'All tools run on your own infrastructure. Your credentials stay yours — no third-party cloud, no telemetry, no lock-in.',
   },
   {
-    icon: Shield,
+    icon: Cpu,
     color: 'text-amber-400',
     bg: 'bg-amber-500/8 border-amber-500/15',
-    title: 'No Lock-In',
-    desc: 'All tools run locally or on your own server. Your credentials, your data, your infrastructure — always.',
+    title: 'Built for Engineers',
+    desc: 'Every product is designed to be picked up in minutes — command-line first, with a web dashboard for teams that want one.',
   },
 ];
 
@@ -39,7 +39,6 @@ export default function AboutSection() {
 
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          {/* Left — prose */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -55,20 +54,19 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-4 text-slate-400 text-base leading-relaxed">
               <p>
-                KITT Corps is an open-source research and development organisation focused on the 
-                challenges data engineers face every day — fragmented databases, brittle pipelines, 
+                KITT Corps is a research and development organisation focused on the challenges 
+                data engineers face every day — fragmented databases, brittle pipelines, 
                 and the hidden cost of moving data between systems.
               </p>
               <p>
-                We design lightweight, self-hostable software that any developer can pick up in 
-                minutes, run on their own infrastructure, and trust with their credentials. 
-                No SaaS lock-in. No vendor dependency. Just clean, auditable tooling that does 
+                We design lightweight, self-hostable software that any developer can deploy 
+                in minutes, run on their own infrastructure, and trust with their credentials. 
+                No cloud dependency. No subscription. Just clean, auditable tooling that does 
                 exactly what it says.
               </p>
             </div>
           </motion.div>
 
-          {/* Right — value cards */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, GitBranch, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function TeamSection() {
   return (
@@ -46,28 +46,17 @@ export default function TeamSection() {
               <p className="text-sm text-slate-400 leading-relaxed mb-6">
                 Built KITT Corps to solve real data-engineering friction encountered firsthand — 
                 wrestling multiple disparate databases into a coherent schema without heavyweight 
-                commercial tooling. Every product we ship reflects that same drive toward 
-                simplicity and developer ownership.
+                commercial tooling. Every product reflects that same drive toward simplicity and 
+                developer ownership.
               </p>
 
-              <div className="flex gap-3">
-                <a
-                  href="mailto:kittu.priyatham@gmail.com"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/8 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-all"
-                >
-                  <Mail className="w-3.5 h-3.5 text-cyan-400" />
-                  Email
-                </a>
-                <a
-                  href="https://github.com/KITT-Corps"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/8 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-all"
-                >
-                  <GitBranch className="w-3.5 h-3.5 text-purple-400" />
-                  GitHub
-                </a>
-              </div>
+              <a
+                href="mailto:kittu.priyatham@gmail.com"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-white/8 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-all"
+              >
+                <Mail className="w-3.5 h-3.5 text-cyan-400" />
+                kittu.priyatham@gmail.com
+              </a>
             </div>
           </motion.div>
         </div>
@@ -79,18 +68,16 @@ export default function TeamSection() {
           transition={{ delay: 0.3 }}
           className="mt-12 text-center p-8 rounded-2xl border border-dashed border-white/10 max-w-lg mx-auto"
         >
-          <p className="text-sm font-semibold text-slate-300 mb-2">Want to contribute?</p>
+          <p className="text-sm font-semibold text-slate-300 mb-2">Interested in joining the team?</p>
           <p className="text-sm text-slate-500 mb-5">
-            KITT Corps is open to collaborators. Open a pull request on any of our repositories to get involved.
+            We're always open to conversations with talented engineers who care about data infrastructure. Reach out directly.
           </p>
           <a
-            href="https://github.com/KITT-Corps"
-            target="_blank"
-            rel="noreferrer"
+            href="mailto:kittu.priyatham@gmail.com"
             className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:underline"
           >
-            View all repositories
-            <ExternalLink className="w-3.5 h-3.5" />
+            <Mail className="w-3.5 h-3.5" />
+            Get in touch
           </a>
         </motion.div>
 

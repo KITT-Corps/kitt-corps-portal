@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { GitBranch, Database, LayoutDashboard, ArrowUpRight, Check } from 'lucide-react';
+import { Database, LayoutDashboard, Check, Mail } from 'lucide-react';
 
 const products = [
   {
@@ -20,10 +20,8 @@ const products = [
       'Extensible pipeline structure for warehouses and external API sources',
       'Command-line operable with zero cloud dependency',
     ],
-    stack: ['Python 3.8+', 'MySQL', 'MongoDB', 'MIT License'],
+    stack: ['Python 3.8+', 'MySQL', 'MongoDB'],
     version: 'v1.2.0-beta',
-    repo: 'https://github.com/KITT-Corps/Data-Mate',
-    repoLabel: 'KITT-Corps/Data-Mate',
   },
   {
     id: 'datamateweb',
@@ -37,22 +35,20 @@ const products = [
     iconColor: 'text-purple-400',
     tagline: 'Visualise and administer your data topology.',
     description:
-      'DataMateWeb is the browser-based companion to Data-Mate. Built on Python Flask with animated SVG topology trees, it provides a full administrative interface for managing connections, schemas, and data pipeline health.',
+      'DataMateWeb is the browser-based companion to Data-Mate. Built on Python Flask with animated SVG topology trees, it provides a full administrative interface for managing connections, schemas, and pipeline health.',
     capabilities: [
       'Auth gateway with user sessions, login, and registration',
       'Interactive node topology maps for connected schema visualisation',
       'Central database controls and diagnostic dashboard indicators',
     ],
-    stack: ['Python 3.6+', 'Flask', 'GSAP', 'MIT License'],
+    stack: ['Python 3.6+', 'Flask', 'GSAP'],
     version: 'v1.0.4-dev',
-    repo: 'https://github.com/Chaos-Corps/DataMateWeb',
-    repoLabel: 'Chaos-Corps/DataMateWeb',
   },
 ];
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="py-24 bg-slate-900/20 border-b border-slate-800/60 relative">
+    <section id="products" className="py-24 bg-slate-900/20 border-b border-white/5 relative">
       <div className="grid-lines absolute inset-0 opacity-10 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
@@ -65,8 +61,8 @@ export default function ProductsSection() {
           <p className="text-xs font-mono tracking-widest text-cyan-400 uppercase mb-4">Our Products</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Two tools. One goal.</h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-base leading-relaxed">
-            KITT Corps ships two open-source products that work together to consolidate, 
-            visualise, and govern your data infrastructure — entirely on your own terms.
+            KITT Corps develops two proprietary products that work together to consolidate,
+            visualise, and govern your data infrastructure — entirely on your own infrastructure.
           </p>
         </motion.div>
 
@@ -78,22 +74,20 @@ export default function ProductsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`group flex flex-col p-8 rounded-2xl border border-slate-800 bg-slate-950/50 transition-colors ${product.borderHover}`}
+              className={`flex flex-col p-8 rounded-2xl border border-slate-800 bg-slate-950/50 transition-colors ${product.borderHover}`}
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-xl border ${product.iconBg}`}>
-                    <product.icon className={`w-6 h-6 ${product.iconColor}`} />
+              <div className="flex items-center gap-4 mb-6">
+                <div className={`p-3 rounded-xl border ${product.iconBg}`}>
+                  <product.icon className={`w-6 h-6 ${product.iconColor}`} />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2.5 mb-1">
+                    <h3 className="text-xl font-bold text-white">{product.name}</h3>
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-mono border ${product.badgeColor}`}>
+                      {product.badge}
+                    </span>
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2.5 mb-1">
-                      <h3 className="text-xl font-bold text-white">{product.name}</h3>
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-mono border ${product.badgeColor}`}>
-                        {product.badge}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-500 font-mono">{product.version}</p>
-                  </div>
+                  <p className="text-xs text-slate-500 font-mono">{product.version}</p>
                 </div>
               </div>
 
@@ -113,43 +107,34 @@ export default function ProductsSection() {
                 ))}
               </div>
 
-              <div className="mb-8 flex flex-wrap gap-2">
+              <div className="mt-auto flex flex-wrap gap-2">
                 {product.stack.map((s) => (
                   <span key={s} className="px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-400">
                     {s}
                   </span>
                 ))}
               </div>
-
-              <div className="mt-auto">
-                <a
-                  href={product.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${product.accentColor} hover:underline`}
-                >
-                  <GitBranch className="w-4 h-4" />
-                  {product.repoLabel}
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
-                </a>
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Subtle integration callout */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-10 p-6 rounded-2xl border border-slate-800/60 bg-gradient-to-r from-cyan-950/20 to-purple-950/20 text-center"
+          className="mt-10 p-6 rounded-2xl border border-slate-800/60 bg-gradient-to-r from-cyan-950/20 to-purple-950/20 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          <p className="text-sm text-slate-400">
-            <span className="text-white font-medium">Data-Mate</span> and{' '}
-            <span className="text-white font-medium">DataMateWeb</span> are designed to be used together —
-            run the pipeline engine from the command line, then monitor and manage it through the web dashboard.
+          <p className="text-sm text-slate-400 text-center sm:text-left">
+            <span className="text-white font-medium">Interested in licensing Data-Mate or DataMateWeb</span> for your organisation?
           </p>
+          <a
+            href="mailto:kittu.priyatham@gmail.com"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-sm text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            Get in touch
+          </a>
         </motion.div>
 
       </div>

@@ -2,7 +2,7 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProductsSection from './components/ProductsSection';
 import TeamSection from './components/TeamSection';
-import { GitBranch, Mail, Cpu, ExternalLink } from 'lucide-react';
+import { Mail, Cpu } from 'lucide-react';
 
 export default function App() {
   const scrollToId = (id: string) => {
@@ -26,9 +26,7 @@ export default function App() {
             <div className="p-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-105 transition-transform">
               <Cpu className="w-4 h-4" />
             </div>
-            <span className="text-base font-bold tracking-tight text-white">
-              KITT Corps
-            </span>
+            <span className="text-base font-bold tracking-tight text-white">KITT Corps</span>
           </button>
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-slate-400">
@@ -49,13 +47,11 @@ export default function App() {
           </nav>
 
           <a
-            href="https://github.com/KITT-Corps"
-            target="_blank"
-            rel="noreferrer"
+            href="mailto:kittu.priyatham@gmail.com"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300 hover:text-white hover:border-white/20 transition-all"
           >
-            <GitBranch className="w-3.5 h-3.5" />
-            GitHub
+            <Mail className="w-3.5 h-3.5" />
+            Contact
           </a>
         </div>
       </header>
@@ -77,31 +73,18 @@ export default function App() {
         <section id="contact" className="py-28 bg-[#070b13]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-xs tracking-widest text-cyan-400 uppercase mb-4 font-mono">Contact</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-5">
-              Let's talk.
-            </h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-5">Let's talk.</h2>
             <p className="text-slate-400 text-base leading-relaxed mb-10">
-              Have a question about our tools, want to collaborate, 
-              or just want to say hello? We'd love to hear from you.
+              Have a question about our products, interested in licensing, or want to discuss 
+              a potential collaboration? We'd love to hear from you.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="mailto:kittu.priyatham@gmail.com"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-cyan-400 bg-cyan-400 text-slate-950 text-sm font-semibold hover:bg-transparent hover:text-cyan-400 transition-all glow-cyan"
-              >
-                <Mail className="w-4 h-4" />
-                kittu.priyatham@gmail.com
-              </a>
-              <a
-                href="https://github.com/KITT-Corps"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-white/10 text-sm text-slate-300 hover:text-white hover:border-white/20 transition-all"
-              >
-                <ExternalLink className="w-4 h-4" />
-                GitHub Organisation
-              </a>
-            </div>
+            <a
+              href="mailto:kittu.priyatham@gmail.com"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-cyan-400 bg-cyan-400 text-slate-950 text-sm font-semibold hover:bg-transparent hover:text-cyan-400 transition-all glow-cyan"
+            >
+              <Mail className="w-4 h-4" />
+              kittu.priyatham@gmail.com
+            </a>
           </div>
         </section>
       </main>
@@ -109,7 +92,7 @@ export default function App() {
       {/* ── Footer ── */}
       <footer className="bg-slate-950 border-t border-white/5 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-10 mb-10">
+          <div className="grid md:grid-cols-3 gap-10 mb-10">
 
             <div className="md:col-span-2 space-y-4">
               <div className="flex items-center gap-2.5">
@@ -119,8 +102,8 @@ export default function App() {
                 <span className="font-bold text-white">KITT Corps</span>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
-                Open-source developer tools for database orchestration, schema unification, 
-                and data infrastructure. Built for engineers who value ownership.
+                Research & development organisation building proprietary developer tools 
+                for database orchestration and data infrastructure.
               </p>
             </div>
 
@@ -144,40 +127,17 @@ export default function App() {
                 ))}
               </ul>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="text-xs tracking-wider uppercase text-slate-300 font-semibold">Open Source</h4>
-              <ul className="space-y-2 text-sm text-slate-500">
-                <li>
-                  <a href="https://github.com/KITT-Corps/Data-Mate" target="_blank" rel="noreferrer"
-                    className="hover:text-slate-200 transition-colors inline-flex items-center gap-1.5">
-                    Data-Mate <ExternalLink className="w-3 h-3 opacity-50" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Chaos-Corps/DataMateWeb" target="_blank" rel="noreferrer"
-                    className="hover:text-slate-200 transition-colors inline-flex items-center gap-1.5">
-                    DataMateWeb <ExternalLink className="w-3 h-3 opacity-50" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/KITT-Corps" target="_blank" rel="noreferrer"
-                    className="hover:text-slate-200 transition-colors inline-flex items-center gap-1.5">
-                    All repositories <ExternalLink className="w-3 h-3 opacity-50" />
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <p className="text-xs text-slate-600">
-              &copy; {new Date().getFullYear()} KITT Corps. MIT Licensed.
+              &copy; {new Date().getFullYear()} KITT Corps. All rights reserved.
             </p>
             <p className="text-xs text-slate-600">Research & Development Organisation</p>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, GitBranch } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   onScrollToMerge: () => void;
@@ -24,7 +24,7 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-slate-400 mb-8"
           >
-            Research & Development · Open Source
+            Research & Development
           </motion.div>
 
           <motion.h1
@@ -46,9 +46,8 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
             transition={{ delay: 0.2 }}
             className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl"
           >
-            KITT Corps builds open-source tools that help engineering teams connect, 
-            unify, and govern heterogeneous databases — without the overhead of 
-            commercial platforms or vendor lock-in.
+            KITT Corps builds proprietary developer tools that help engineering teams connect,
+            unify, and govern heterogeneous databases — without the overhead of legacy platforms.
           </motion.p>
 
           <motion.div
@@ -71,20 +70,9 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
             >
               About us
             </button>
-
-            <a
-              href="https://github.com/KITT-Corps"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm text-slate-400 hover:text-white transition-all"
-            >
-              <GitBranch className="w-4 h-4" />
-              GitHub
-            </a>
           </motion.div>
         </div>
 
-        {/* Company metrics strip */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,10 +80,10 @@ export default function HeroSection({ onScrollToAbout, onScrollToProducts }: Her
           className="mt-24 flex flex-wrap gap-x-16 gap-y-6"
         >
           {[
-            { value: '2', label: 'Open-source products' },
-            { value: 'MIT', label: 'Licensed & free to use' },
-            { value: '100%', label: 'Self-hostable, no SaaS' },
-            { value: 'Zero', label: 'Vendor lock-in' },
+            { value: '2', label: 'Proprietary products' },
+            { value: '100%', label: 'Self-hostable' },
+            { value: 'Zero', label: 'Cloud dependency' },
+            { value: 'Full', label: 'Data ownership' },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-2xl font-bold text-white mb-0.5">{stat.value}</div>
